@@ -1,0 +1,25 @@
+<html>
+  <head>
+      <title>Sweet cravings anyone?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.0.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body>
+    <a-scene mindar-image="imageTargetSrc: https://slbmjy.github.io/ar-test/ar-elements/targets.mind; maxTrack: 2" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-assets>
+        <a-asset-item id="beach" src="https://slbmjy.github.io/ar-test/ar-elements/popups/have-a-treat.png"></a-asset-item>
+        <a-asset-item id=“food" src="https://slbmjy.github.io/ar-test/ar-elements/popups/donut.glb"></a-asset-item>
+      </a-assets>
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      <!-- Adjust AR contents here.-->
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-image height="2" width="1"></a-image>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 1">
+          <a-gltf-model position="-0.4 0.6 0.2" rotation="90 0 0" scale="0.02 0.02 0.02"></a-gltf-model>      
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
